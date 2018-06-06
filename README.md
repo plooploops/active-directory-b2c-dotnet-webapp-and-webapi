@@ -16,6 +16,40 @@ The sample covers the following:
 * Calling an OpenID Connect identity provider (Azure AD B2C)
 * Acquiring a token from Azure AD B2C using MSAL
 
+## Multilayer build for Docker
+
+### Make multi layer builds on Windows Server 1709 VM with containers
+https://docs.microsoft.com/en-us/virtualization/windowscontainers/
+
+`Build Task Service` from within the TaskWebApp Folder
+```
+docker build -t myrepo.azurecr.io/aad-b2c-sample-task-service:windowsservercore-1709 .
+```
+
+`Build Task Web App` from within the TaskWebApp Folder
+```
+docker build -t myrepo.azurecr.io/aad-b2c-sample-task-web-app:windowsservercore-1709 .
+```
+
+### Push the image to ACR
+
+#### Make sure to login for ACR  push
+```
+az acr login --name myregistry
+```
+
+#### Push image to ACR
+
+`Push Web Service`
+```
+docker push myregistry.azurecr.io/aad-b2c-sample-task-service:windowsservercore-1709
+```
+
+`Push Web App`
+```
+docker push myregistry.azurecr.io/aad-b2c-sample-task-web-app:windowsservercore-1709
+```
+
 ## How To Run This Sample
 
 There are two ways to run this sample:
