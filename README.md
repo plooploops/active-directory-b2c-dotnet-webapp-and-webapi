@@ -1,4 +1,4 @@
----
+﻿---
 services: active-directory-b2c
 platforms: dotnet
 author: dstrockis
@@ -16,12 +16,28 @@ The sample covers the following:
 * Calling an OpenID Connect identity provider (Azure AD B2C)
 * Acquiring a token from Azure AD B2C using MSAL
 
+## TODO
+
+`TODO #1 - Separate Multi-layer Build vs. Local Build`
+
+It would be good to separate out a `Multi-layer build` vs. a `local build` (via Docker Support).
+
+For a `local build` with Docker support has contents to ignore the obj folder in the .dockerignore file.  For the `Multi-layer build`, this file is intentionally left empty.
+
+The Dockerfile would also look different for this `local build` approach:
+```
+FROM microsoft/aspnet:4.7.1-windowsservercore-1709
+ARG source
+WORKDIR /inetpub/wwwroot
+COPY ${source:-obj/Docker/publish} .
+```
+
 ## Multilayer build for Docker
 
 ### Make multi layer builds on Windows Server 1709 VM with containers
 https://docs.microsoft.com/en-us/virtualization/windowscontainers/
 
-`Build Task Service` from within the TaskWebApp Folder
+`Build Task Service` from within the TaskService Folder
 ```
 docker build -t myrepo.azurecr.io/aad-b2c-sample-task-service:windowsservercore-1709 .
 ```
