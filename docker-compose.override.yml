@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  taskservice:
+    ports:
+      - "80"
+  taskwebapp:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
+

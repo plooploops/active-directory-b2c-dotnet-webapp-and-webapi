@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  taskservice:
+    image: taskservice
+    build:
+      context: .\TaskService
+      dockerfile: Dockerfile
+
+  taskwebapp:
+    image: taskwebapp
+    build:
+      context: .\TaskWebApp
+      dockerfile: Dockerfile
