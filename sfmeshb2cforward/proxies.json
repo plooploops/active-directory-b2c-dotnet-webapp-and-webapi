@@ -5,7 +5,7 @@
             "matchCondition": {
                 "route": "/"
             },
-            "backendUri": "https://sfmeshb2cforward.azurewebsites.net/api/HttpTriggerCSharp1?code=mw3C8ldFZOyaKNGAyjGS7sP2hwhtQMfcSFilJ4AUYkeGOtgWq3Wdag=="
+            "backendUri": "https://sfmeshb2cforward.azurewebsites.net/api/HttpTriggerCSharp1?code=mycode"
         }
     }
 }
