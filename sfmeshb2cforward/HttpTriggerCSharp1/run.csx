@@ -15,6 +15,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
     return await client.GetAsync(new Uri(url, UriKind.Absolute)); // work around to get AAD B2C to point to HTTPS endpoint
 }
 
+//https://stackoverflow.com/questions/22336301/handling-http-302-with-httpclient-on-wp8
 public class GlobalRedirectHandler : DelegatingHandler
 {
     public GlobalRedirectHandler(HttpMessageHandler innerHandler)
