@@ -34,7 +34,7 @@ COPY ${source:-obj/Docker/publish} .
 
 `TODO #2 - AAD B2C requires an HTTPS Endpoint`
 
-A work around is to use Azure Functions to redirect from an https endpoint for http to Service Fabric Mesh.  This is not recommended for anything other for `testing purposes`.
+A work around is to use Azure Functions to redirect from an https endpoint for http to Service Fabric Mesh.  This is not recommended for anything other than for `testing purposes`.
 
 Get the deployed `function URL`
 ![Mesh-01][Mesh-01]
