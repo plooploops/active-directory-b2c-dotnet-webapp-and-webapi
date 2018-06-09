@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "forward": {
+            "matchCondition": {
+                "route": "/"
+            },
+            "backendUri": "https://sfmeshb2cforward.azurewebsites.net/api/HttpTriggerCSharp1?code=mw3C8ldFZOyaKNGAyjGS7sP2hwhtQMfcSFilJ4AUYkeGOtgWq3Wdag=="
+        }
+    }
+}

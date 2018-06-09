@@ -32,6 +32,19 @@ WORKDIR /inetpub/wwwroot
 COPY ${source:-obj/Docker/publish} .
 ```
 
+`TODO #2 - AAD B2C requires an HTTPS Endpoint`
+
+A work around is to use Azure Functions to redirect from an https endpoint for http to Service Fabric Mesh.  This is not recommended for anything other for `testing purposes`.
+
+Get the deployed `function URL`
+![Mesh-01][Mesh-01]
+
+Make sure the function URL is set in the `proxy`
+![Mesh-02][Mesh-02]
+
+This `proxy URL` will be used for the `AAD B2C Policy.`
+![Mesh-03][Mesh-03]
+
 ## Multilayer build for Docker
 
 ### Make multi layer builds on Windows Server 1709 VM with containers
@@ -222,3 +235,7 @@ Additional information regarding this sample can be found in our documentation:
 Please file any questions or problems with the sample as a github issue. You can also post on [StackOverflow](https://stackoverflow.com/questions/tagged/azure-ad-b2c) with the tag `azure-ad-b2c`.
 
 
+<!-- Images -->
+[Mesh-01]: ./media/sf-mesh-function-1.png
+[Mesh-02]: ./media/sf-mesh-function-2.png
+[Mesh-03]: ./media/sf-mesh-function-3.png

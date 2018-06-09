@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{84AE09
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{051DF93C-2759-47DF-B869-4EC587698973}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sf-mesh-https-workaround", "sf-mesh-https-workaround\sf-mesh-https-workaround.csproj", "{6A715E23-FB0E-4E7D-AF30-8BADCBC7209E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{051DF93C-2759-47DF-B869-4EC587698973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{051DF93C-2759-47DF-B869-4EC587698973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{051DF93C-2759-47DF-B869-4EC587698973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A715E23-FB0E-4E7D-AF30-8BADCBC7209E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A715E23-FB0E-4E7D-AF30-8BADCBC7209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A715E23-FB0E-4E7D-AF30-8BADCBC7209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A715E23-FB0E-4E7D-AF30-8BADCBC7209E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

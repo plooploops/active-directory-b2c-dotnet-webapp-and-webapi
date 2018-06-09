@@ -1,12 +1,12 @@
-### This is for the docker multilayer build ###
-### docker build -t myrepo.azurecr.io/aad-b2c-sample-task-web-app:windowsservercore-1709 .
-
-# escape=`
-FROM jsturtevant/4.7-windowsservercore-1709-builder:latest as build-agent
-SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
-
-# Build files
-WORKDIR C:\src
+#### This is for the docker multilayer build ###
+#### docker build -t myrepo.azurecr.io/aad-b2c-sample-task-web-app:windowsservercore-1709 .
+#
+## escape=`
+#FROM jsturtevant/4.7-windowsservercore-1709-builder:latest as build-agent
+#SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+#
+## Build files
+#WORKDIR C:\src
 COPY packages.config .
 RUN nuget restore packages.config -PackagesDirectory ..\packages
 
